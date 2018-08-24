@@ -2,6 +2,14 @@ provider "aws" {
   region = "${var.aws_region}"
 }
 
+terraform {
+  backend "s3" {
+    bucket = "terrafrom-state-location-215"
+    key = "terraform/terraform.tfstate"
+    region = "eu-west-1"
+  }
+}
+
 module "storage" {
   source       = "./storage"
   project_name = "${var.project_name}"

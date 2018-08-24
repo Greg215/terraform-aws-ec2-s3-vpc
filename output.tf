@@ -15,8 +15,6 @@ output "Subnet IPs" {
 output "Public Security Group" {
   value = "${module.networking.public_sg}"
 }
-<<<<<<< HEAD
-=======
 
 #---Compute Outputs ------
 
@@ -27,4 +25,3 @@ output "Public Instance IDs" {
 output "Public Instance IPs" {
   value = "${module.compute.server_ip}"
 }
->>>>>>> a0983ebafb28afb00a1de17ace4e115608ae99f4
